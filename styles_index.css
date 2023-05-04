@@ -1,0 +1,58 @@
+.header-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+.buttonreg {
+    margin-top: 15px;
+    margin-left: 1100px;
+}
+  
+.button_login_reg {
+    color:#794f5b;
+    font-size: 16px;
+    font-weight: 500;
+    background: #ffe600;
+    border-radius: 10px;
+    border: 2px;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.main-section {
+    margin-top: 500px;
+    margin-left: 635px;
+    border-radius: 10px;
+}
+  
+.button_start {
+    height: 50px;
+    width: 200px;
+    color: #794f5b;
+    opacity: 0.9;
+    border: 2px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+    background: #ffe600;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+  
+.button_info {
+    height: 50px;
+    width: 200px;
+    color: #794f5b;
+    opacity: 0.9;
+    border-radius: 10px;
+    cursor: pointer;
+    background: aqua;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+}
+  
