@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Sign Up</title>
+  <link rel="stylesheet" href="css/styles_form.css" />
+  <script>
+    console.log("Form")
+
+
+    let c_start
+    let c_end
+    function getCookie(c_name) {
+      if (document.cookie.length > 0) {
+        c_start = document.cookie.indexOf(c_name + "=");
+        if (c_start != -1) {
+          c_start = c_start + c_name.length + 1;
+          c_end = document.cookie.indexOf(";", c_start);
+          if (c_end == -1) {
+            c_end = document.cookie.length;
+          }
+          return unescape(document.cookie.substring(c_start, c_end));
+        }
+      }
+      return "";
+    }
+    if (getCookie("login")) location.assign("http://localhost:1921/")
+  </script>
+</head>
+<body>
+<section class="wrapper">
+  <div class="form signup">
+    <header>Регистрация</header>
+    <form id="signupForm" action="/api" method="POST">
+      <input type="hidden" name="action" value="signup">
+      <input type="text" name="nickname" placeholder="Никнейм" required />
+      <input type="email" name="email" placeholder="Почта" required />
+      <input type="password" name="password" placeholder="Пароль" required />
+      <div class="checkbox">
+        <input type="checkbox" id="signupCheck" />
+        <label for="signupCheck">Запомнить меня</label>
+      </div>
+      <input class="signup-color" type="submit" value="Зарегистрироваться" />
+    </form>
+  </div>
+
+  <div class="form login">
+    <header>Войти</header>
+    <form id="loginForm" action="/api" method="POST">
+      <input type="hidden" name="action" value="login">
+      <input type="email" name="email" placeholder="Почта" required />
+      <input type="password" name="password" placeholder="Пароль" required />
+      <a href="#">Забыли пароль?</a>
+      <input type="submit" value="Войти" />
+    </form>
+  </div>
+</section>
+
+<script>
+
+
+  const wrapper = document.querySelector(".wrapper"),
+          signupHeader = document.querySelector(".signup header"),
+          loginHeader = document.querySelector(".login header");
+
+  loginHeader.addEventListener("click", () => {
+    wrapper.classList.add("active");
+  });
+  signupHeader.addEventListener("click", () => {
+    wrapper.classList.remove("active");
+  });
+</script>
+
+</body>
+</html>

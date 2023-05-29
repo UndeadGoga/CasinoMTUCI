@@ -1,0 +1,26 @@
+{
+  "name": "blackjack-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "bufferutil": "^4.0.2",
+    "express": "^4.17.1",
+    "jquery": "^3.7.0",
+    "jsdom": "^22.1.0",
+    "package.json": "^2.0.1",
+    "pg": "^8.10.0",
+    "universal-cookie": "^4.0.4",
+    "utf-8-validate": "^5.0.3",
+    "websocket": "^1.0.31",
+    "ws": "^7.4.1"
+  }
+}
